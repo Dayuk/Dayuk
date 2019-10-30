@@ -1,5 +1,4 @@
 discord.py==0.16.12
-urllib3.py==1.25.6
 requests.py==2.22.0
 bs4.py==0.0.1
 Beautifulsoup4.py==4.8.1
