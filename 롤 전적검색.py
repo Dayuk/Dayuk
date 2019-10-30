@@ -9,7 +9,7 @@ if not discord.opus.is_loaded():
      
 app = discord.Client()
 
-token = 'NjAzNjQ5NTAxOTE5NzA3MTU2.XbkpCw.BIn9NeLaMl3eCELkwrjqZX7KVPA'
+token = 'NjAzNjQ5NTAxOTE5NzA3MTU2.XbkqwQ.2MHs2POxcEheg_fY3mvnpuBhfIc'
 
 @app.event
 async def on_ready():
@@ -123,4 +123,4 @@ async def on_message(message):
         await app.send_message(message.channel, embed=embed)
         
 
-app.run('NjAzNjQ5NTAxOTE5NzA3MTU2.XbkpCw.BIn9NeLaMl3eCELkwrjqZX7KVPA')
+app.run('NjAzNjQ5NTAxOTE5NzA3MTU2.XbkqwQ.2MHs2POxcEheg_fY3mvnpuBhfIc')
