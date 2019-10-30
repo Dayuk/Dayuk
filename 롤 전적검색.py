@@ -123,4 +123,4 @@ async def on_message(message):
         await app.send_message(message.channel, embed=embed)
         
 
-app.run('NjAzNjQ5NTAxOTE5NzA3MTU2.XTijqg.6Tm3WqN38PfMNg0QletvzTSI3Dk')
+app.run('NjAzNjQ5NTAxOTE5NzA3MTU2.XbklYw.qsrS2qchRZsXRf5ASf2_iBCcoCI')
