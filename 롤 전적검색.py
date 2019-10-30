@@ -9,7 +9,7 @@ if not discord.opus.is_loaded():
      
 app = discord.Client()
 
-token = 'NjAzNjU1NjM2MzA3Mjc5ODgz.XTikqg.E3KzSp8taYRI9Sg5NhudXHBtfOc'
+token = 'NjAzNjQ5NTAxOTE5NzA3MTU2.XbkpCw.BIn9NeLaMl3eCELkwrjqZX7KVPA'
 
 @app.event
 async def on_ready():
