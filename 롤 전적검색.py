@@ -3,6 +3,7 @@ import discord
 import urllib.request
 import requests
 from bs4 import BeautifulSoup
+import os
 
 if not discord.opus.is_loaded():
      discord.opus.load_opus('opus')
@@ -123,5 +124,5 @@ async def on_message(message):
         await app.send_message(message.channel, embed=embed)
         
 
-
-app.run('NjAzNjQ5NTAxOTE5NzA3MTU2.XTijqg.6Tm3WqN38PfMNg0QletvzTSI3Dk')
+access_token = os.environ["BOT_TOKEN"]
+app.run('access_token')
