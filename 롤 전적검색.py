@@ -1,4 +1,3 @@
-import asyncio
 import discord
 import urllib.request
 import requests
@@ -9,13 +8,12 @@ if not discord.opus.is_loaded():
      
 app = discord.Client()
 
-token = 'NjAzNjQ5NTAxOTE5NzA3MTU2.XbkqwQ.2MHs2POxcEheg_fY3mvnpuBhfIc'
+token = 'NjAzNjQ5NTAxOTE5NzA3MTU2.XbkrXg.x_JBM_hWyHr-7qMq8rZOPMQxILc'
 
 @app.event
 async def on_ready():
     print(app.user.name)
     print(app.user.id)
-    await app.change_presence(game=discord.Game(name="happygamer",type=1))
 
 
 @app.event
@@ -120,7 +118,49 @@ async def on_message(message):
                               '솔랭티어: '+Rank3+ ' /'+LP4+' \n'
                               '승,패:'+win3+' / '+lose3+' / '+ratio3, color=0x00ff00)
         embed.set_image(url="https://img1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/liveboard/mk/e36b876b022443239474b7e1675875cf.jpg")
-        await app.send_message(message.channel, embed=embed)
-        
+        await message.channel.send(embed=embed)
 
-app.run('NjAzNjQ5NTAxOTE5NzA3MTU2.XbkqwQ.2MHs2POxcEheg_fY3mvnpuBhfIc')
+        #############################디스코드 부분######################
+
+    if message.content.startswith ("!스크림추가"):
+        embed4 = discord.Embed(title="--------양식--------", description="팀명:\n날짜:\n시간(0~23시):\n팀 평균티어:\n팀장 롤닉네임:\n팀장 디스코드 닉네임:\n(*꼭 양식을 포함하여 적어주세요*)", color=0x00ff00)
+        await app.send_message(message.channel, embed=embed4)
+                               
+    if message.content.startswith ("팀명:"):
+       embed2 = discord.Embed(title="일정추가가 완료되었습니다.", description="본인의 팀과 경기를 희망하는 팀 혹은 관리자의 연락이 갈 수 있습니다.", color=0xFF0000)
+       await message.channel.send(embed=embed2)
+       await app.get_channel(int(689935648098091174)).send(message.content)
+
+
+    if message.content.startswith ("!신고"):
+       embed5 = discord.Embed(title="--------양식--------", description="!가해자 닉네임: \n 신고사유: \n 신고자 닉네임: \n (양식을 꼭 포함하여 적어주세요.)", color=0xFF0000)
+       await message.channel.send(embed=embed5)
+       await message.delete()
+                               
+    if message.content.startswith ("!가해자"):
+       embed13 = discord.Embed(title="신고가 완료되었습니다.", description="관리자에게서 연락이 가실 수 있습니다.", color=0xFF0000)
+       await message.channel.send(embed=embed13)
+       await app.get_channel(int(689936339696877568)).send(message.content)
+       await message.delete()
+
+
+    if message.content.startswith ("!채널생성"):
+        embed6 = discord.Embed(title="채널이 생성되었습니다.", description="채널명과 설정을 변경해주세요.", color=0xFF0000)
+        await message.channel.send(embed=embed6)
+        await guild_voice.add[
+                              "id": "660213767820410908",
+                              "guild_id": "660213767820410908",
+                              "name": "ROCKET CHEESE",
+                              "type": 2,
+                              "nsfw": false,
+                              "position": 5,
+                              "permission_overwrites": [],
+                              "bitrate": 64000,
+                              "user_limit": 0,
+                              "parent_id": null
+                            ]
+
+
+app.run('NjYwMjE0NjU2Njg1NTcyMTA2.XgZm4A.eABoudppFj-w31OsX34U6AmhZSw')
+
+
