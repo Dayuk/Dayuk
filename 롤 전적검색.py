@@ -1,4 +1,5 @@
 import discord
+import os
 import urllib.request
 import requests
 from bs4 import BeautifulSoup
@@ -160,7 +161,7 @@ async def on_message(message):
                               "parent_id": null
                             ]
 
-
-app.run('NjYwMjE0NjU2Njg1NTcyMTA2.XgZm4A.eABoudppFj-w31OsX34U6AmhZSw')
+access_token = os.environ["BOT_TOKEN"]
+app.run(access_token)
 
 
